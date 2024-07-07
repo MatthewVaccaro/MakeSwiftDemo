@@ -11,10 +11,14 @@
     "@makeswift/runtime": "^0.19.1",
     "@radix-ui/react-accordion": "^1.1.2",
     "@radix-ui/react-tabs": "^1.0.4",
+    "axios": "^1.7.2",
     "clsx": "^2.0.0",
+    "framer-motion": "^11.2.13",
+    "fs.promises": "^0.1.2",
     "next": "^14.2.3",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "zustand": "^4.5.4"
   },
   "devDependencies": {
     "@trivago/prettier-plugin-sort-imports": "^4.2.0",

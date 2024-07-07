@@ -1,3 +1,38 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body,
+head,
+html {
+  background-color: #15181c;
+}
+
+@layer components {
+  /* default font sizes for h1-h6 and p */
+  h1 {
+    @apply text-h1 leading-[69px];
+  }
+  h2 {
+    @apply text-h2;
+  }
+  h3 {
+    @apply text-h3;
+  }
+  h4 {
+    @apply text-h4;
+  }
+  h5 {
+    @apply text-h5;
+  }
+  h6 {
+    @apply text-h6;
+  }
+  p {
+    @apply text-p;
+  }
+  a {
+    @apply font-medium underline decoration-[#ffffff50] decoration-dashed underline-offset-8;
+  }
+  /* base nav style */
+}
