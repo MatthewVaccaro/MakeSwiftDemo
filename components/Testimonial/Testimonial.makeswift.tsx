@@ -31,7 +31,7 @@ runtime.registerComponent(Testimonial, {
     position: TextInput({ label: 'Position', defaultValue: '' }),
     photo: Image({
       label: 'icon',
-      format: Image.Format.URL,
+      format: Image.Format.WithDimensions,
     }),
     audio: Combobox({
       label: 'Audio',

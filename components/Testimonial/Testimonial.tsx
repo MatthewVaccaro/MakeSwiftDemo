@@ -6,16 +6,10 @@ import { useEffect, useRef, useState } from 'react'
 import { motion, useSpring, useTransform } from 'framer-motion'
 import { useAudioContext } from 'store/audioStore'
 
+import { ImageWithDimensions } from '@/lib/types'
+
 import { Waveform } from './Waveform'
 import { Pause, Play } from './assets/Controlls'
-
-type ImageWithDimensions = {
-  url: string
-  dimensions: {
-    width: number
-    height: number
-  }
-}
 
 export const Testimonial = ({
   color,
@@ -106,9 +100,10 @@ export const Testimonial = ({
         <div className="z-10 flex items-center gap-3">
           {photo ? (
             <Image
+              className="rounded-full"
               src={photo.url}
-              width={photo.dimensions.width}
-              height={photo.dimensions.height}
+              width={56}
+              height={56}
               alt="A headshot of the current person talking"
             />
           ) : (

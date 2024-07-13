@@ -1,58 +1,57 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
-import axios from 'axios'
+import { TooltipProps } from 'recharts'
+import { NameType, ValueType } from 'recharts/types/component/DefaultTooltipContent'
 
-import { Testimonial } from '@/components/Testimonial/Testimonial'
-
-type AudioFiles = {
-  gore: string
-  christian: string
-  flo: string
-  andrew: string
-}
+import { Gradient } from '@/components/Gradient/Gradient'
+import { Graph } from '@/components/Graph/Graph'
 
 export default function Component() {
-  const [audioFiles, setAudioFiles] = useState<AudioFiles>()
-  useEffect(() => {
-    axios.get<AudioFiles>('http://localhost:3000/audioList').then(res => setAudioFiles(res.data))
-  }, [])
-
   return (
-    <div>
-      {audioFiles && (
-        <div>
-          <Testimonial
-            audio={audioFiles.gore}
-            color="#EDAC34"
-            name="gore"
-            employer="media news"
-            position="engineer"
-          />
-          <Testimonial
-            audio={audioFiles.flo}
-            color="#EA3BA7"
-            name="florance"
-            employer="brigit"
-            position="engineer"
-          />
-          <Testimonial
-            audio={audioFiles.christian}
-            color="#EDAC34"
-            name="christian"
-            employer="bitdrift"
-            position="engineer"
-          />
-          <Testimonial
-            audio={audioFiles.andrew}
-            color="#EA3BA7"
-            name="andrew"
-            employer="Prokur"
-            position="designer"
-          />
-        </div>
-      )}
+    <div className="mt-20">
+      <div id="BLOCK" className="my-6 h-72 w-full bg-orange-400" />
+      <div id="BLOCK" className="my-6 h-72 w-full bg-orange-400" />
+      <div id="BLOCK" className="my-6 h-72 w-full bg-orange-400" />
+      <div id="BLOCK" className="my-6 h-72 w-full bg-orange-400" />
+      <div id="BLOCK" className="my-6 h-72 w-full bg-orange-400" />
+      <div id="BLOCK" className="my-6 h-72 w-full bg-orange-400" />
+      <div id="BLOCK" className="my-6 h-72 w-full bg-orange-400" />
+      <div id="BLOCK" className="my-6 h-72 w-full bg-orange-400" />
+      <div id="BLOCK" className="my-6 h-72 w-full bg-orange-400" />
+      <div id="BLOCK" className="my-6 h-72 w-full bg-orange-400" />
+      <div id="BLOCK" className="my-6 h-72 w-full bg-orange-400" />
+      <div id="BLOCK" className="my-6 h-72 w-full bg-orange-400" />
+      <div id="BLOCK" className="my-6 h-72 w-full bg-orange-400" />
+      <div id="BLOCK" className="my-6 h-72 w-full bg-orange-400" />
+      <div id="BLOCK" className="my-6 h-72 w-full bg-orange-400" />
+      <Gradient
+        degree={0}
+        height={1200}
+        colors={['#F7D697', '#EA3BA7', '#5A0DFF', '#0D99FF']}
+        slot={<h1 className="text-white"> hello </h1>}
+      />
+      <div id="BLOCK" className="my-6 h-72 w-full bg-orange-400" />
+      <div id="BLOCK" className="my-6 h-72 w-full bg-orange-400" />
+      <div id="BLOCK" className="my-6 h-72 w-full bg-orange-400" />
+      <div id="BLOCK" className="my-6 h-72 w-full bg-orange-400" />
+      <div id="BLOCK" className="my-6 h-72 w-full bg-orange-400" />
+      <div id="BLOCK" className="my-6 h-72 w-full bg-orange-400" />
+      <div id="BLOCK" className="my-6 h-72 w-full bg-orange-400" />
+      <div id="BLOCK" className="my-6 h-72 w-full bg-orange-400" />
+      <div id="BLOCK" className="my-6 h-72 w-full bg-orange-400" />
+      <div id="BLOCK" className="my-6 h-72 w-full bg-orange-400" />
+      <div id="BLOCK" className="my-6 h-72 w-full bg-orange-400" />
+      <div id="BLOCK" className="my-6 h-72 w-full bg-orange-400" />
+      <div id="BLOCK" className="my-6 h-72 w-full bg-orange-400" />
+      <div id="BLOCK" className="my-6 h-72 w-full bg-orange-400" />
+      <div id="BLOCK" className="my-6 h-72 w-full bg-orange-400" />
+      <div id="BLOCK" className="my-6 h-72 w-full bg-orange-400" />
+      <div id="BLOCK" className="my-6 h-72 w-full bg-orange-400" />
+      <div id="BLOCK" className="my-6 h-72 w-full bg-orange-400" />
+      <div id="BLOCK" className="my-6 h-72 w-full bg-orange-400" />
+      <div id="BLOCK" className="my-6 h-72 w-full bg-orange-400" />
     </div>
   )
 }

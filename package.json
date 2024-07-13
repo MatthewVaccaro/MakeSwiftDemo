@@ -10,14 +10,20 @@
   "dependencies": {
     "@makeswift/runtime": "^0.19.1",
     "@radix-ui/react-accordion": "^1.1.2",
+    "@radix-ui/react-hover-card": "^1.1.1",
     "@radix-ui/react-tabs": "^1.0.4",
+    "@types/recharts": "^1.8.29",
     "axios": "^1.7.2",
     "clsx": "^2.0.0",
     "framer-motion": "^11.2.13",
     "fs.promises": "^0.1.2",
+    "hex-color-to-color-name": "^1.0.2",
+    "i": "^0.3.7",
     "next": "^14.2.3",
+    "npm": "^10.8.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "recharts": "^2.12.7",
     "zustand": "^4.5.4"
   },
   "devDependencies": {
