@@ -28,7 +28,6 @@ export const Major = ({
   additionalContext: string
 }) => {
   const mappedData = graphData.map(v => ({ value: v }))
-  console.log({ icon })
   return (
     <Hover content={additionalContext}>
       <div

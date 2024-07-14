@@ -23,7 +23,6 @@ export default async function Page({ params }: { params: ParsedUrlQuery }) {
   })
 
   if (snapshot == null) {
-    console.log('is this running')
     return notFound()
   }
 

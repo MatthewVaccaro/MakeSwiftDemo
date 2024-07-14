@@ -53,7 +53,7 @@ runtime.registerComponent(Graph, {
         values: List({
           label: 'Values',
           type: TextInput({ label: 'Value', defaultValue: '' }),
-          getItemLabel(item) {
+          getItemLabel(item: string | undefined) {
             return `${item}` ?? '0'
           },
         }),

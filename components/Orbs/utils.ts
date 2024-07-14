@@ -88,7 +88,6 @@ export function reverseFrames({
   // If there were animation more then this I would write real logic to support the effort
   //
   //
-  console.log(x.length, y.length)
   const newX = [x[2], x[1], x[0], x[3], x[2]]
   const newY = [y[2], y[1], y[0], y[3], y[2]]
   const newSacle = scale ? [scale[2], scale[1], scale[0], scale[3], scale[2]] : []

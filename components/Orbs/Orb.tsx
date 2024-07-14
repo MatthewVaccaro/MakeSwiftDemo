@@ -72,8 +72,6 @@ export const Orb = ({
   }, []) // Empty array ensures that effect is only run on mount
 
   if (width && height) {
-    console.log({ pattern })
-
     return (
       <motion.div
         style={{ width: orbSize, height: orbSize, background: color }}
