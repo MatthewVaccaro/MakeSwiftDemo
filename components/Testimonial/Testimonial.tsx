@@ -24,7 +24,7 @@ export const Testimonial = ({
   name: string
   position: string
   employer: string
-  audio: string
+  audio?: string
 }) => {
   const audioContext = useAudioContext()
   const audioRef = useRef<HTMLMediaElement>(null)
@@ -54,14 +54,16 @@ export const Testimonial = ({
   const toggle = () => {
     audioContext.init()
 
-    if (audioRef.current?.paused) {
-      audioContext.addSource(audio, audioRef)
-      audioRef.current?.play()
-      setIsPlaying(true)
-    } else {
-      audioContext.addSource(audio, audioRef)
-      audioRef.current?.pause()
-      setIsPlaying(false)
+    if (audio) {
+      if (audioRef.current?.paused) {
+        audioContext.addSource(audio, audioRef)
+        audioRef.current?.play()
+        setIsPlaying(true)
+      } else {
+        audioContext.addSource(audio, audioRef)
+        audioRef.current?.pause()
+        setIsPlaying(false)
+      }
     }
   }
 
@@ -72,7 +74,7 @@ export const Testimonial = ({
         className="relative flex w-full items-center justify-between overflow-hidden rounded-xl bg-white p-4"
       >
         <div className="absolute bottom-0 left-0 z-0 bg-white">
-          {audioContext.sources?.[audio] && (
+          {audio && audioContext.sources?.[audio] && (
             <>
               <motion.div
                 style={{
