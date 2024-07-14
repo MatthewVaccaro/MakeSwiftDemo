@@ -22,7 +22,10 @@ export default async function Page({ params }: { params: ParsedUrlQuery }) {
     siteVersion: getSiteVersion(),
   })
 
-  if (snapshot == null) return notFound()
+  if (snapshot == null) {
+    console.log('is this running')
+    return notFound()
+  }
 
   return <MakeswiftPage snapshot={snapshot} />
 }

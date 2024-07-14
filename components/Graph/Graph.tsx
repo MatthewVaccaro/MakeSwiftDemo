@@ -52,8 +52,6 @@ export function Graph({ legends, title, bars, xAxis, yAxis = false }: GraphProps
 
   const mappedData = Object.values(cache).map(value => value)
 
-  console.log({ mappedData, xAxis })
-
   return (
     <div className="w-full">
       <h2 className="my-3 font-semibold text-white"> {title} </h2>
@@ -68,7 +66,7 @@ export function Graph({ legends, title, bars, xAxis, yAxis = false }: GraphProps
         </div>
       )}
 
-      <div className="w-full overflow-x-scroll">
+      <div className="mt-4 w-full overflow-x-scroll">
         <div className="mx-auto h-[600px] w-[800px] min-w-[600px]">
           <ResponsiveContainer height="100%" width="100%">
             <LineChart width={200} height={200} data={mappedData}>

@@ -33,7 +33,7 @@ export const Major = ({
     <Hover content={additionalContext}>
       <div
         style={{ background }}
-        className="flex h-[207px] w-full max-w-[350px] flex-col justify-between rounded-xl px-4 py-4 transition-all duration-300 hover:scale-110"
+        className="flex h-[207px] w-full  flex-col justify-between rounded-xl px-4 py-4 transition-all duration-300 hover:scale-110"
       >
         <div>
           <div className="flex items-end gap-1">

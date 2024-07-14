@@ -1,3 +1,4 @@
+import { ComponentIcon } from '@makeswift/runtime'
 import {
   Checkbox,
   Color,

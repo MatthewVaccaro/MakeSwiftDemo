@@ -28,6 +28,7 @@ runtime.registerComponent(Gradient, {
     degree: Number({ label: 'degree', min: 0, max: 360, step: 5, defaultValue: 45 }),
     height: Number({ label: 'height', min: 200, step: 25, defaultValue: 600 }),
     opacity: Number({ label: 'opacity', min: 0, max: 1, step: 0.1, defaultValue: 0.5 }),
+    flip: Checkbox({ label: 'Flip Gradient', defaultValue: false }),
     slot: Slot(),
   },
 })

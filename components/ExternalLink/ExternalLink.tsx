@@ -17,8 +17,11 @@ type Props = {
 
 export const ExternalLink = ({ border, padding, icon, alt, header, sub, link }: Props) => {
   return link ? (
-    <Link className="w-full no-underline" {...link}>
-      <div className={`flex w-full items-center justify-between ${padding} ${border}`}>
+    <Link
+      className={`w-full no-underline transition-all duration-300 hover:scale-110 hover:bg-[#ffffff10] ${padding} ${border}`}
+      {...link}
+    >
+      <div className="flex w-full items-center justify-between">
         <div className="flex gap-2">
           {icon && <Image src={icon} alt={alt} width={44} height={44} />}
           <div className="flex flex-col gap-2">

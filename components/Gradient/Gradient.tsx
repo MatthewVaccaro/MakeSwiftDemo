@@ -9,10 +9,18 @@ type Props = {
   degree: number
   height?: number
   opacity?: number
+  flip: boolean
   slot: ReactNode
 }
 
-export const Gradient = ({ slot, colors, degree = 0, opacity = 0.5, height = 600 }: Props) => {
+export const Gradient = ({
+  slot,
+  colors,
+  degree = 0,
+  opacity = 0.5,
+  height = 600,
+  flip = false,
+}: Props) => {
   const gradientRef = useRef<HTMLDivElement>(null)
 
   const { scrollYProgress } = useScroll({
@@ -32,7 +40,7 @@ export const Gradient = ({ slot, colors, degree = 0, opacity = 0.5, height = 600
           width,
           height: height / 2,
         }}
-        className={`absolute left-0 right-0 z-10 mx-auto w-full rounded-b-full`}
+        className={`absolute left-0 right-0 z-10 mx-auto w-full rounded-b-full ${flip ? 'bottom-0' : 'top-0'}`}
       />
       <div className="relative z-50">{slot}</div>
     </div>
