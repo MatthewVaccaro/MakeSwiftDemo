@@ -1,18 +1,7 @@
 'use client'
 
-import Image from 'next/image'
-import { MouseEvent, ReactNode, useEffect, useState } from 'react'
+import { ReactNode } from 'react'
 
-import * as HoverCard from '@radix-ui/react-hover-card'
-import myLogo from 'assets/logo.svg'
-import makeswiftLogo from 'assets/makeswift.svg'
-import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion'
-
-import { CardSet } from '@/components/CardSet/CardSet'
-import { Hero } from '@/components/Hero/Hero'
-import { Major } from '@/components/Major/Major'
-import cal from '@/components/Major/assets/cal.svg'
-import { Minor } from '@/components/Minor/Minor'
 import { Orb, OrbProps } from '@/components/Orbs/Orb'
 
 export const Orbs = ({
@@ -21,7 +10,7 @@ export const Orbs = ({
   opacity = 0.5,
 }: {
   orbs: OrbProps[]
-  slot: ReactNode | ReactNode[]
+  slot: ReactNode
   opacity?: number
 }) => {
   return (

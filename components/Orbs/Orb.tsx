@@ -5,7 +5,6 @@ import { motion } from 'framer-motion'
 import {
   Pattern,
   generateCarouselPoints,
-  generateCirclePoints,
   generateDiamondPoints,
   generateTrianglePoints,
   reverseFrames,
@@ -18,8 +17,6 @@ export interface OrbProps {
   padding: number
   orbSize: number
   heightOverride?: number
-  delay: number
-  offset: number
   reverse: boolean
 }
 
