@@ -36,7 +36,9 @@ runtime.registerComponent(Testimonial, {
     audio: Combobox({
       label: 'Audio',
       async getOptions(query) {
-        const { data } = await axios.get<AudioFiles>('http://localhost:3000/audioList')
+        const { data } = await axios.get<AudioFiles>(
+          'https://portfolioserver-staging.up.railway.app/audioList'
+        )
         return Object.entries(data)
           .reduce((struct, [key, url]) => {
             struct.push({ id: key, label: key, value: url })

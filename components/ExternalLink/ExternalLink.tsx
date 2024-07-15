@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import Link from 'next/link'
 
 import { LinkValue } from '@/lib/types'
 
@@ -17,7 +16,7 @@ type Props = {
 
 export const ExternalLink = ({ border, padding, icon, alt, header, sub, link }: Props) => {
   return link ? (
-    <Link
+    <a
       className={`w-full no-underline transition-all duration-300 hover:scale-110 hover:bg-[#ffffff10] ${padding} ${border}`}
       {...link}
     >
@@ -31,7 +30,7 @@ export const ExternalLink = ({ border, padding, icon, alt, header, sub, link }: 
         </div>
         <Image src={externalIcon} alt="external link icon" width={24} height={24} />
       </div>
-    </Link>
+    </a>
   ) : (
     <div />
   )
