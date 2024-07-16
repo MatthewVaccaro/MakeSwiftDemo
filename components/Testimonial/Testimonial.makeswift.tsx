@@ -39,6 +39,7 @@ runtime.registerComponent(Testimonial, {
         const { data } = await axios.get<AudioFiles>(
           'https://portfolioserver-staging.up.railway.app/audioList'
         )
+        console.log(data)
         return Object.entries(data)
           .reduce((struct, [key, url]) => {
             struct.push({ id: key, label: key, value: url })
